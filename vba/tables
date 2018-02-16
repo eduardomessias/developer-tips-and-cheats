@@ -1,16 +1,28 @@
 #### Getting the table
-` Set objTable = Worksheets("<worksheet name>").ListObjects("<table name>")
+``` vba
+Set objTable = Worksheets("[worksheet name]").ListObjects("[table name]")
+```
+
 #### Loop throw the table rows
-` For objTableLine = 1 To objTable.ListRows.Count
-` Do
-` Next
+``` vba
+For objTableLine = 1 To objTable.ListRows.Count
+Do
+Next
+```
+
 #### Creating a new row in your table
-` 'At the begining
-` Set objRow = objTable.ListRow.Add
-` 'Wherever you want (X is the new row index at the table)
-` Set objRow = objTable.ListRow.Add X
+``` vba
+'At the begining
+Set objRow = objTable.ListRow.Add
+
+'Wherever you want (X is the new row index at the table)
+Set objRow = objTable.ListRow.Add X
+```
+
 #### Fill the row cells with any value
-` 'X is the column index of the cell and YYYYYY is any value
-` With objRow
-`       .Range(X) = YYYYYY
-` End With
+```vba 
+X is the column index of the cell and YYYYYY is any value
+With objRow
+	.Range(X) = YYYYYY
+End With
+```

@@ -21,7 +21,7 @@ Set objRow = objTable.ListRow.Add X
 
 #### Fill the row cells with any value
 ```vba 
-X is the column index of the cell and YYYYYY is any value
+'X is the column index of the cell and YYYYYY is any value
 With objRow
 	.Range(X) = YYYYYY
 End With

@@ -24,5 +24,6 @@ Set objRow = objTable.ListRow.Add X
 'X is the column index of the cell and YYYYYY is any value
 With objRow
 	.Range(X) = YYYYYY
+	.Range(X+1) = YYYYYY
 End With
 ```
